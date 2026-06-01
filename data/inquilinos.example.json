@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "Inquilino Ejemplo 1",
+        "habitacion": "101",
+        "medidorId": "#0001",
+        "lecturaAnterior": 1200.0,
+        "activo": true,
+        "fechaIngreso": "2026-01-01"
+    },
+    {
+        "id": 2,
+        "nombre": "Inquilino Ejemplo 2",
+        "habitacion": "102",
+        "medidorId": "#0002",
+        "lecturaAnterior": 850.5,
+        "activo": true,
+        "fechaIngreso": "2026-01-01"
+    },
+    {
+        "id": 3,
+        "nombre": "Inquilino Ejemplo 3",
+        "habitacion": "103",
+        "medidorId": "#0003",
+        "lecturaAnterior": 430.0,
+        "activo": true,
+        "fechaIngreso": "2026-02-01"
+    },
+    {
+        "id": 4,
+        "nombre": "Inquilino Ejemplo 4",
+        "habitacion": "104",
+        "medidorId": "#0004",
+        "lecturaAnterior": 0,
+        "activo": false,
+        "fechaIngreso": "2026-01-01"
+    }
+]

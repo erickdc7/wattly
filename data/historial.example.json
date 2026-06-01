@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1000000000001,
+        "mes": "enero",
+        "anio": 2026,
+        "archivoPdf": null,
+        "precioKwh": 0.5814,
+        "cargosCompartidos": {
+            "cargoFijo": 2.16,
+            "mantReposicion": 1.31,
+            "alumbradoPublico": 10.43,
+            "igv": 22.29,
+            "electrificacion": 2.08,
+            "totalCompartido": 38.27
+        },
+        "inquilinosActivos": 3,
+        "cuotaFijaPorInquilino": 12.76,
+        "recibosCalculados": [
+            {
+                "inquilinoId": 1,
+                "nombre": "Inquilino Ejemplo 1",
+                "habitacion": "101",
+                "lecturaAnterior": 1100.0,
+                "lecturaActual": 1200.0,
+                "consumoKwh": 100,
+                "costoConsumo": 58.14,
+                "cuotaFija": 12.76,
+                "otros": 2.00,
+                "totalAPagar": 72.90
+            },
+            {
+                "inquilinoId": 2,
+                "nombre": "Inquilino Ejemplo 2",
+                "habitacion": "102",
+                "lecturaAnterior": 790.0,
+                "lecturaActual": 850.5,
+                "consumoKwh": 60.5,
+                "costoConsumo": 35.17,
+                "cuotaFija": 12.76,
+                "otros": 2.00,
+                "totalAPagar": 49.93
+            },
+            {
+                "inquilinoId": 3,
+                "nombre": "Inquilino Ejemplo 3",
+                "habitacion": "103",
+                "lecturaAnterior": 380.0,
+                "lecturaActual": 430.0,
+                "consumoKwh": 50,
+                "costoConsumo": 29.07,
+                "cuotaFija": 12.76,
+                "otros": 2.00,
+                "totalAPagar": 43.83
+            }
+        ]
+    }
+]
