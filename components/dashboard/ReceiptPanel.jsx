@@ -319,32 +319,32 @@ export function ReceiptPanel({
   };
 
   return (
-    <aside className="w-full lg:w-[450px] shrink-0">
+    <aside className="w-full lg:w-112.5 shrink-0">
       <div ref={receiptRef} className="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col border border-zinc-200">
         <div className="p-5 lg:p-6 bg-zinc-50 flex items-center justify-between border-b border-zinc-200">
-          <span className="text-xs font-[700] text-zinc-500 uppercase tracking-widest font-['Manrope']">Comprobante Individual</span>
+          <span className="text-xs font-bold text-zinc-500 uppercase tracking-widest font-['Manrope']">Comprobante Individual</span>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] px-2 py-0.5 bg-emerald-100 text-[#0d631b] rounded font-[700] uppercase">{periodoLabel}</span>
+            <span className="text-[10px] px-2 py-0.5 bg-emerald-100 text-[#0d631b] rounded font-bold uppercase">{periodoLabel}</span>
             <button onClick={onClose} className="p-1 hover:bg-zinc-200 rounded cursor-pointer"><X size={16} /></button>
           </div>
         </div>
         <div className="p-6 lg:p-8 space-y-6">
           <div className="text-center pb-6 border-b border-dashed border-zinc-200">
-            <p className="text-xs text-zinc-400 font-[500] uppercase tracking-tighter mb-1">Inquilino</p>
-            <h2 className="text-xl lg:text-2xl font-[800] font-['Manrope'] text-[#191c1d] tracking-tight uppercase">{tenant.nombre}</h2>
-            <p className="text-sm text-emerald-700 font-[600]">Hab. {tenant.habitacion}</p>
+            <p className="text-xs text-zinc-400 font-medium uppercase tracking-tighter mb-1">Inquilino</p>
+            <h2 className="text-xl lg:text-2xl font-extrabold font-['Manrope'] text-[#191c1d] tracking-tight uppercase">{tenant.nombre}</h2>
+            <p className="text-sm text-emerald-700 font-semibold">Hab. {tenant.habitacion}</p>
           </div>
 
           <div>
-            <h4 className="text-[11px] font-[700] text-[#0d631b] uppercase tracking-widest mb-3 bg-emerald-50 px-2 py-1 rounded w-fit">Resumen del Mes (Cargos Compartidos)</h4>
+            <h4 className="text-[11px] font-bold text-[#0d631b] uppercase tracking-widest mb-3 bg-emerald-50 px-2 py-1 rounded w-fit">Resumen del Mes (Cargos Compartidos)</h4>
             <div className="space-y-2 px-1">
               {[["Cargo Fijo", charges.cargoFijo], ["Mant. y Reposición", charges.mantReposicion], ["Alumbramiento Público", charges.alumbradoPublico], ["I.G.V (18%)", charges.igv], ["Electrificación", charges.electrificacion]].map(([l, v]) => (
                 <div key={l} className="flex justify-between text-sm">
                   <span className="text-[#40493d]">{l}</span>
-                  <span className="font-[500] text-[#191c1d]">S/ {fmt(v)}</span>
+                  <span className="font-medium text-[#191c1d]">S/ {fmt(v)}</span>
                 </div>
               ))}
-              <div className="pt-2 border-t border-zinc-100 flex justify-between text-sm font-[700]">
+              <div className="pt-2 border-t border-zinc-100 flex justify-between text-sm font-bold">
                 <span className="text-zinc-600">Subtotal Compartido ({fmt(totalFixed)} ÷ {activeTenantCount})</span>
                 <span className="text-emerald-700">S/ {fmt(fixedPerTenant)}</span>
               </div>
@@ -352,36 +352,36 @@ export function ReceiptPanel({
           </div>
 
           <div>
-            <h4 className="text-[11px] font-[700] text-[#0d631b] uppercase tracking-widest mb-3 bg-emerald-50 px-2 py-1 rounded w-fit">Cálculo de Consumo Individual</h4>
+            <h4 className="text-[11px] font-bold text-[#0d631b] uppercase tracking-widest mb-3 bg-emerald-50 px-2 py-1 rounded w-fit">Cálculo de Consumo Individual</h4>
             <div className="space-y-2 px-1">
               <div className="flex justify-between text-sm">
                 <span className="text-[#40493d]">Lectura Medidor ({MONTH_NAMES[periodoMonth - 1]})</span>
-                <span className="font-[500] text-[#191c1d]">{fmtConsumo(lectActual)} kWh</span>
+                <span className="font-medium text-[#191c1d]">{fmtConsumo(lectActual)} kWh</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-[#40493d]">Lectura Medidor ({MONTH_NAMES[prevMonthIdx]})</span>
-                <span className="font-[500] text-[#191c1d]">{fmtConsumo(lectAnterior)} kWh</span>
+                <span className="font-medium text-[#191c1d]">{fmtConsumo(lectAnterior)} kWh</span>
               </div>
-              <div className="flex justify-between text-sm font-[700] text-[#0d631b] italic"><span>Consumo Total</span><span>{fmtConsumo(consumo)} kWh</span></div>
-              <div className="pt-2 flex justify-between text-sm"><span className="text-[#40493d]">Consumo ({fmtConsumo(consumo)} x S/ {charges.precioKwh.toFixed(4)})</span><span className="font-[500] text-[#191c1d]">S/ {fmt(consumo * charges.precioKwh)}</span></div>
-              <div className="flex justify-between text-sm"><span className="text-[#40493d]">Cuota Compartida Fija</span><span className="font-[500] text-[#191c1d]">S/ {fmt(fixedPerTenant)}</span></div>
-              <div className="flex justify-between text-sm"><span className="text-[#40493d]">Otros (Luz, Lavadero, Baño)</span><span className="font-[500] text-[#191c1d]">S/ {fmt(otrosCargos)}</span></div>
+              <div className="flex justify-between text-sm font-bold text-[#0d631b] italic"><span>Consumo Total</span><span>{fmtConsumo(consumo)} kWh</span></div>
+              <div className="pt-2 flex justify-between text-sm"><span className="text-[#40493d]">Consumo ({fmtConsumo(consumo)} x S/ {charges.precioKwh.toFixed(4)})</span><span className="font-medium text-[#191c1d]">S/ {fmt(consumo * charges.precioKwh)}</span></div>
+              <div className="flex justify-between text-sm"><span className="text-[#40493d]">Cuota Compartida Fija</span><span className="font-medium text-[#191c1d]">S/ {fmt(fixedPerTenant)}</span></div>
+              <div className="flex justify-between text-sm"><span className="text-[#40493d]">Otros (Luz, Lavadero, Baño)</span><span className="font-medium text-[#191c1d]">S/ {fmt(otrosCargos)}</span></div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-[#0d631b] to-[#2e7d32] p-6 rounded-xl text-center space-y-1 mt-6">
-            <p className="text-[10px] font-[700] text-emerald-200 uppercase tracking-widest">Total a Pagar</p>
+          <div className="bg-linear-to-br from-[#0d631b] to-[#2e7d32] p-6 rounded-xl text-center space-y-1 mt-6">
+            <p className="text-[10px] font-bold text-emerald-200 uppercase tracking-widest">Total a Pagar</p>
             <div className="flex items-center justify-center gap-2">
-              <span className="text-xl font-[700] text-white/60">S/</span>
-              <p className="text-4xl lg:text-5xl font-[900] font-['Manrope'] text-white">{fmt(Math.ceil(totalPagar))}</p>
+              <span className="text-xl font-bold text-white/60">S/</span>
+              <p className="text-4xl lg:text-5xl font-black font-['Manrope'] text-white">{fmt(Math.ceil(totalPagar))}</p>
             </div>
           </div>
 
           <div className="space-y-3 pt-4">
-            <button onClick={handleDownload} className="w-full flex items-center justify-center gap-2 py-3 lg:py-4 px-6 bg-white border border-zinc-200 text-zinc-700 rounded-xl font-[700] font-['Manrope'] hover:bg-zinc-50 transition-colors shadow-sm text-sm cursor-pointer">
+            <button onClick={handleDownload} className="w-full flex items-center justify-center gap-2 py-3 lg:py-4 px-6 bg-white border border-zinc-200 text-zinc-700 rounded-xl font-bold font-['Manrope'] hover:bg-zinc-50 transition-colors shadow-sm text-sm cursor-pointer">
               <ImageIcon size={18} /> Descargar Recibo
             </button>
-            <button onClick={handleCopy} className="w-full flex items-center justify-center gap-2 py-3 lg:py-4 px-6 bg-zinc-800 text-white rounded-xl font-[700] font-['Manrope'] hover:bg-zinc-700 transition-colors shadow-sm text-sm cursor-pointer">
+            <button onClick={handleCopy} className="w-full flex items-center justify-center gap-2 py-3 lg:py-4 px-6 bg-zinc-800 text-white rounded-xl font-bold font-['Manrope'] hover:bg-zinc-700 transition-colors shadow-sm text-sm cursor-pointer">
               <Copy size={18} /> {copySuccess ? "¡Copiado!" : "Copiar Recibo"}
             </button>
           </div>

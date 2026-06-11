@@ -44,7 +44,7 @@ export function TenantFormModal({
               {initialData ? <Edit3 size={20} className="text-[#0d631b]" /> : <UserPlus size={20} className="text-[#0d631b]" />}
             </div>
             <div>
-              <h3 className="font-['Manrope'] font-[700] text-lg text-[#191c1d]">{title}</h3>
+              <h3 className="font-['Manrope'] font-bold text-lg text-[#191c1d]">{title}</h3>
               <p className="text-xs text-[#40493d]">{subtitle}</p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export function TenantFormModal({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Nombre */}
             <div className="sm:col-span-2">
-              <label className="text-xs font-[600] text-[#445963] uppercase tracking-wider block mb-1.5">
+              <label className="text-xs font-semibold text-[#445963] uppercase tracking-wider block mb-1.5">
                 Nombre Completo <span className="text-red-400">*</span>
               </label>
               <input
@@ -71,7 +71,7 @@ export function TenantFormModal({
 
             {/* Habitación */}
             <div>
-              <label className="text-xs font-[600] text-[#445963] uppercase tracking-wider block mb-1.5">
+              <label className="text-xs font-semibold text-[#445963] uppercase tracking-wider block mb-1.5">
                 Nro. Habitación <span className="text-red-400">*</span>
               </label>
               <input
@@ -86,7 +86,7 @@ export function TenantFormModal({
 
             {/* Fecha Ingreso */}
             <div>
-              <label className="text-xs font-[600] text-[#445963] uppercase tracking-wider block mb-1.5">
+              <label className="text-xs font-semibold text-[#445963] uppercase tracking-wider block mb-1.5">
                 Fecha de Ingreso <span className="text-red-400">*</span>
               </label>
               <input
@@ -100,7 +100,7 @@ export function TenantFormModal({
 
             {/* Medidor ID */}
             <div>
-              <label className="text-xs font-[600] text-[#445963] uppercase tracking-wider block mb-1.5">
+              <label className="text-xs font-semibold text-[#445963] uppercase tracking-wider block mb-1.5">
                 ID Medidor
               </label>
               <input
@@ -114,7 +114,7 @@ export function TenantFormModal({
 
             {/* Lectura Anterior */}
             <div>
-              <label className="text-xs font-[600] text-[#445963] uppercase tracking-wider block mb-1.5">
+              <label className="text-xs font-semibold text-[#445963] uppercase tracking-wider block mb-1.5">
                 Lectura al Ingreso (kWh)
               </label>
               <input
@@ -131,13 +131,13 @@ export function TenantFormModal({
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 py-2.5 px-4 bg-zinc-100 text-zinc-600 rounded-lg font-['Manrope'] text-sm font-[600] hover:bg-zinc-200 transition-colors cursor-pointer"
+              className="flex-1 py-2.5 px-4 bg-zinc-100 text-zinc-600 rounded-lg font-['Manrope'] text-sm font-semibold hover:bg-zinc-200 transition-colors cursor-pointer"
             >
               Cancelar
             </button>
             <button
               type="submit"
-              className="flex-1 py-2.5 px-4 bg-[#0d631b] text-white rounded-lg font-['Manrope'] text-sm font-[600] hover:bg-[#2e7d32] transition-colors shadow-sm cursor-pointer"
+              className="flex-1 py-2.5 px-4 bg-[#0d631b] text-white rounded-lg font-['Manrope'] text-sm font-semibold hover:bg-[#2e7d32] transition-colors shadow-sm cursor-pointer"
             >
               {submitLabel}
             </button>

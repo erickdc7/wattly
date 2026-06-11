@@ -24,7 +24,7 @@ export function MobileHeader() {
   return (
     <div className="lg:hidden">
       <div className="flex items-center justify-between px-4 py-3 bg-white border-b border-zinc-200">
-        <span className="text-xl font-[700] tracking-tight text-[#0d631b] font-['Manrope']">Wattly</span>
+        <span className="text-xl font-bold tracking-tight text-[#0d631b] font-['Manrope']">Wattly</span>
         <button onClick={() => setOpen(!open)} className="p-2 cursor-pointer">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -58,14 +58,14 @@ export function DesktopSidebar() {
   return (
     <aside className="hidden lg:flex flex-col w-64 bg-stone-50/80 backdrop-blur-xl py-6 px-4 shadow-[0_4px_20px_rgba(25,28,29,0.04)] h-screen sticky top-0 overflow-y-auto shrink-0">
       <div className="mb-8 px-2 flex flex-col gap-8">
-        <span className="text-2xl font-[700] tracking-tight text-[#0d631b] font-['Manrope']">Wattly</span>
+        <span className="text-2xl font-bold tracking-tight text-[#0d631b] font-['Manrope']">Wattly</span>
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-emerald-100 shrink-0 border-2 border-emerald-50 flex items-center justify-center">
-            <span className="text-[#0d631b] font-[700] text-sm font-['Manrope']">ED</span>
+            <span className="text-[#0d631b] font-bold text-sm font-['Manrope']">ED</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-xs font-[600] text-zinc-500 font-['Manrope'] uppercase tracking-wider">Bienvenido</span>
-            <span className="text-sm font-[700] text-[#0d631b] font-['Manrope']">Erick Díaz</span>
+            <span className="text-xs font-semibold text-zinc-500 font-['Manrope'] uppercase tracking-wider">Bienvenido</span>
+            <span className="text-sm font-bold text-[#0d631b] font-['Manrope']">Erick Díaz</span>
           </div>
         </div>
       </div>

@@ -11,21 +11,21 @@ export function DeleteConfirmModal({ tenant, onConfirm, onClose }) {
             <AlertTriangle size={28} className="text-red-500" />
           </div>
           <div>
-            <h3 className="font-['Manrope'] font-[700] text-lg text-[#191c1d]">Eliminar Inquilino</h3>
+            <h3 className="font-['Manrope'] font-bold text-lg text-[#191c1d]">Eliminar Inquilino</h3>
             <p className="text-sm text-[#40493d] mt-2">
-              ¿Estás seguro de que deseas eliminar a <span className="font-[600] text-[#191c1d]">{tenant.nombre}</span> (Hab. {tenant.habitacion})? Esta acción no se puede deshacer.
+              ¿Estás seguro de que deseas eliminar a <span className="font-semibold text-[#191c1d]">{tenant.nombre}</span> (Hab. {tenant.habitacion})? Esta acción no se puede deshacer.
             </p>
           </div>
           <div className="flex gap-3 pt-2">
             <button
               onClick={onClose}
-              className="flex-1 py-2.5 px-4 bg-zinc-100 text-zinc-600 rounded-lg font-['Manrope'] text-sm font-[600] hover:bg-zinc-200 transition-colors cursor-pointer"
+              className="flex-1 py-2.5 px-4 bg-zinc-100 text-zinc-600 rounded-lg font-['Manrope'] text-sm font-semibold hover:bg-zinc-200 transition-colors cursor-pointer"
             >
               Cancelar
             </button>
             <button
               onClick={() => { onConfirm(tenant.id); onClose(); }}
-              className="flex-1 py-2.5 px-4 bg-red-500 text-white rounded-lg font-['Manrope'] text-sm font-[600] hover:bg-red-600 transition-colors cursor-pointer"
+              className="flex-1 py-2.5 px-4 bg-red-500 text-white rounded-lg font-['Manrope'] text-sm font-semibold hover:bg-red-600 transition-colors cursor-pointer"
             >
               Sí, Eliminar
             </button>

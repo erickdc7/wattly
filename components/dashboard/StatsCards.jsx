@@ -14,9 +14,9 @@ export function StatsCards({ totalFixed, precioKwh, activeCount, fixedPerTenant 
     <div className="grid grid-cols-2 gap-4 flex-[1.5]">
       {cards.map((card) => (
         <div key={card.label} className="bg-white p-5 lg:p-6 rounded-xl flex flex-col justify-between shadow-sm">
-          <span className="text-xs font-[700] text-[#445963] uppercase tracking-wider">{card.label}</span>
+          <span className="text-xs font-bold text-[#445963] uppercase tracking-wider">{card.label}</span>
           <div className="mt-2">
-            <span className="text-2xl lg:text-3xl font-[700] font-['Manrope'] text-[#191c1d]">{card.value}</span>
+            <span className="text-2xl lg:text-3xl font-bold font-['Manrope'] text-[#191c1d]">{card.value}</span>
           </div>
         </div>
       ))}

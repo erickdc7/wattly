@@ -17,8 +17,8 @@ export function PeriodSelector({ month, year, onPrev, onNext, isCurrentMonth, mi
         <ChevronLeft size={20} />
       </button>
       <div className="text-center">
-        <p className="text-[10px] font-[700] text-[#445963] uppercase tracking-widest">Período de Facturación</p>
-        <h3 className="font-['Manrope'] font-[700] text-lg text-[#0d631b]">{label}</h3>
+        <p className="text-[10px] font-bold text-[#445963] uppercase tracking-widest">Período de Facturación</p>
+        <h3 className="font-['Manrope'] font-bold text-lg text-[#0d631b]">{label}</h3>
       </div>
       <button
         onClick={onNext}

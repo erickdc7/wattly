@@ -12,8 +12,8 @@ export function TenantStatsRow({ total, active }) {
           <Users size={20} className="text-[#0d631b]" />
         </div>
         <div>
-          <span className="text-xs font-[700] text-[#445963] uppercase tracking-wider block">Total</span>
-          <span className="text-2xl font-[700] font-['Manrope'] text-[#191c1d]">{total}</span>
+          <span className="text-xs font-bold text-[#445963] uppercase tracking-wider block">Total</span>
+          <span className="text-2xl font-bold font-['Manrope'] text-[#191c1d]">{total}</span>
         </div>
       </div>
       <div className="bg-white p-5 rounded-xl shadow-sm flex items-center gap-4">
@@ -21,8 +21,8 @@ export function TenantStatsRow({ total, active }) {
           <Check size={20} className="text-[#0d631b]" />
         </div>
         <div>
-          <span className="text-xs font-[700] text-[#445963] uppercase tracking-wider block">Activos</span>
-          <span className="text-2xl font-[700] font-['Manrope'] text-emerald-700">{active}</span>
+          <span className="text-xs font-bold text-[#445963] uppercase tracking-wider block">Activos</span>
+          <span className="text-2xl font-bold font-['Manrope'] text-emerald-700">{active}</span>
         </div>
       </div>
       <div className="bg-white p-5 rounded-xl shadow-sm flex items-center gap-4">
@@ -30,8 +30,8 @@ export function TenantStatsRow({ total, active }) {
           <X size={20} className="text-zinc-500" />
         </div>
         <div>
-          <span className="text-xs font-[700] text-[#445963] uppercase tracking-wider block">Inactivos</span>
-          <span className="text-2xl font-[700] font-['Manrope'] text-zinc-500">{inactive}</span>
+          <span className="text-xs font-bold text-[#445963] uppercase tracking-wider block">Inactivos</span>
+          <span className="text-2xl font-bold font-['Manrope'] text-zinc-500">{inactive}</span>
         </div>
       </div>
     </div>

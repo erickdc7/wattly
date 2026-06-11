@@ -20,7 +20,7 @@ export function TenantTable({ tenants, onEdit, onDelete, onToggleActive }) {
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden">
       <div className="px-4 lg:px-8 py-5 border-b border-zinc-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <h2 className="font-['Manrope'] text-lg font-[700] text-[#191c1d]">Lista de Inquilinos</h2>
+        <h2 className="font-['Manrope'] text-lg font-bold text-[#191c1d]">Lista de Inquilinos</h2>
         <div className="relative w-full sm:w-64">
           <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" />
           <input
@@ -33,15 +33,15 @@ export function TenantTable({ tenants, onEdit, onDelete, onToggleActive }) {
         </div>
       </div>
       <div className="overflow-x-auto">
-        <table className="w-full text-left border-collapse min-w-[650px]">
+        <table className="w-full text-left border-collapse min-w-162.5">
           <thead>
             <tr className="bg-[#f3f4f5]/50">
-              <th className="px-4 lg:px-8 py-4 text-xs font-[700] text-[#445963] uppercase tracking-wider">Inquilino</th>
-              <th className="px-4 lg:px-6 py-4 text-xs font-[700] text-[#445963] uppercase tracking-wider text-center">Habitación</th>
-              <th className="px-4 lg:px-6 py-4 text-xs font-[700] text-[#445963] uppercase tracking-wider text-center">Fecha Ingreso</th>
-              <th className="px-4 lg:px-6 py-4 text-xs font-[700] text-[#445963] uppercase tracking-wider text-center">Última Lectura</th>
-              <th className="px-4 lg:px-6 py-4 text-xs font-[700] text-[#445963] uppercase tracking-wider text-center">Estado</th>
-              <th className="px-4 lg:px-8 py-4 text-xs font-[700] text-[#445963] uppercase tracking-wider text-right">Acciones</th>
+              <th className="px-4 lg:px-8 py-4 text-xs font-bold text-[#445963] uppercase tracking-wider">Inquilino</th>
+              <th className="px-4 lg:px-6 py-4 text-xs font-bold text-[#445963] uppercase tracking-wider text-center">Habitación</th>
+              <th className="px-4 lg:px-6 py-4 text-xs font-bold text-[#445963] uppercase tracking-wider text-center">Fecha Ingreso</th>
+              <th className="px-4 lg:px-6 py-4 text-xs font-bold text-[#445963] uppercase tracking-wider text-center">Última Lectura</th>
+              <th className="px-4 lg:px-6 py-4 text-xs font-bold text-[#445963] uppercase tracking-wider text-center">Estado</th>
+              <th className="px-4 lg:px-8 py-4 text-xs font-bold text-[#445963] uppercase tracking-wider text-right">Acciones</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-zinc-50">
@@ -57,11 +57,11 @@ export function TenantTable({ tenants, onEdit, onDelete, onToggleActive }) {
                 <td className="px-4 lg:px-8 py-4">
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-full bg-emerald-50 flex items-center justify-center shrink-0">
-                      <span className="text-[#0d631b] font-[700] text-xs font-['Manrope']">
+                      <span className="text-[#0d631b] font-bold text-xs font-['Manrope']">
                         {tenant.nombre.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase()}
                       </span>
                     </div>
-                    <span className="font-['Manrope'] font-[600] text-[#191c1d] text-sm">{tenant.nombre}</span>
+                    <span className="font-['Manrope'] font-semibold text-[#191c1d] text-sm">{tenant.nombre}</span>
                   </div>
                 </td>
                 <td className="px-4 lg:px-6 py-4 text-sm text-[#40493d] text-center">{tenant.habitacion}</td>
@@ -83,7 +83,7 @@ export function TenantTable({ tenants, onEdit, onDelete, onToggleActive }) {
                     onClick={() => onToggleActive(tenant)}
                     className={`relative w-11 h-6 rounded-full transition-colors cursor-pointer ${tenant.activo ? "bg-[#0d631b]" : "bg-[#e1e3e4]"}`}
                   >
-                    <span className={`absolute top-[2px] left-[2px] w-5 h-5 bg-white rounded-full shadow transition-transform ${tenant.activo ? "translate-x-5" : "translate-x-0"}`} />
+                    <span className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform ${tenant.activo ? "translate-x-5" : "translate-x-0"}`} />
                   </button>
                 </td>
                 <td className="px-4 lg:px-8 py-4 text-right">

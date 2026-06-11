@@ -42,7 +42,7 @@ export function HistoryModal({ tenant, historial, onClose }) {
             <History size={20} className="text-[#0d631b]" />
           </div>
           <div>
-            <h3 className="font-['Manrope'] font-[700] text-lg text-[#191c1d]">Historial de Lecturas</h3>
+            <h3 className="font-['Manrope'] font-bold text-lg text-[#191c1d]">Historial de Lecturas</h3>
             <p className="text-xs text-[#40493d]">Hab. {tenant.habitacion} — {tenant.nombre}</p>
           </div>
         </div>
@@ -52,8 +52,8 @@ export function HistoryModal({ tenant, historial, onClose }) {
       </div>
       <div className="p-6 space-y-4">
         <div className="flex items-center gap-2 text-sm text-[#40493d]">
-          <span className="font-[600]">Fecha de ingreso:</span>
-          <span className="px-2 py-0.5 bg-emerald-50 text-[#0d631b] rounded font-[600] text-xs">{fechaFormatted}</span>
+          <span className="font-semibold">Fecha de ingreso:</span>
+          <span className="px-2 py-0.5 bg-emerald-50 text-[#0d631b] rounded font-semibold text-xs">{fechaFormatted}</span>
         </div>
 
         {historyRows.length === 0 ? (
@@ -65,27 +65,27 @@ export function HistoryModal({ tenant, historial, onClose }) {
             <table className="w-full text-left border-collapse text-sm">
               <thead>
                 <tr className="bg-[#f3f4f5]/50">
-                  <th className="px-3 py-2.5 text-[10px] font-[700] text-[#445963] uppercase tracking-wider">Período</th>
-                  <th className="px-3 py-2.5 text-[10px] font-[700] text-[#445963] uppercase tracking-wider text-right">Lect. Anterior</th>
-                  <th className="px-3 py-2.5 text-[10px] font-[700] text-[#445963] uppercase tracking-wider text-right">Lect. Actual</th>
-                  <th className="px-3 py-2.5 text-[10px] font-[700] text-[#445963] uppercase tracking-wider text-right">Consumo</th>
-                  <th className="px-3 py-2.5 text-[10px] font-[700] text-[#445963] uppercase tracking-wider text-right">Total</th>
+                  <th className="px-3 py-2.5 text-[10px] font-bold text-[#445963] uppercase tracking-wider">Período</th>
+                  <th className="px-3 py-2.5 text-[10px] font-bold text-[#445963] uppercase tracking-wider text-right">Lect. Anterior</th>
+                  <th className="px-3 py-2.5 text-[10px] font-bold text-[#445963] uppercase tracking-wider text-right">Lect. Actual</th>
+                  <th className="px-3 py-2.5 text-[10px] font-bold text-[#445963] uppercase tracking-wider text-right">Consumo</th>
+                  <th className="px-3 py-2.5 text-[10px] font-bold text-[#445963] uppercase tracking-wider text-right">Total</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-50">
                 {historyRows.reverse().map((row, i) => (
                   <tr key={i} className="hover:bg-[#f3f4f5] transition-colors">
                     <td className="px-3 py-2.5">
-                      <span className="font-[600] text-[#191c1d] capitalize">{row.periodo}</span>
+                      <span className="font-semibold text-[#191c1d] capitalize">{row.periodo}</span>
                     </td>
                     <td className="px-3 py-2.5 text-right font-mono text-[#40493d]">{row.lectAnterior?.toLocaleString()}</td>
                     <td className="px-3 py-2.5 text-right font-mono text-[#40493d]">{row.lectActual?.toLocaleString()}</td>
                     <td className="px-3 py-2.5 text-right">
-                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-[500] ${row.consumo === 0 ? "bg-zinc-200 text-zinc-500" : "bg-emerald-100 text-emerald-800"}`}>
+                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${row.consumo === 0 ? "bg-zinc-200 text-zinc-500" : "bg-emerald-100 text-emerald-800"}`}>
                         {row.consumo} kWh
                       </span>
                     </td>
-                    <td className="px-3 py-2.5 text-right font-[600] text-[#0d631b]">S/ {row.total?.toFixed(2)}</td>
+                    <td className="px-3 py-2.5 text-right font-semibold text-[#0d631b]">S/ {row.total?.toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>

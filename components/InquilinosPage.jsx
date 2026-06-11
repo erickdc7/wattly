@@ -47,12 +47,12 @@ export function InquilinosPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="font-['Manrope'] font-[700] text-2xl text-[#191c1d]">Inquilinos</h1>
+          <h1 className="font-['Manrope'] font-bold text-2xl text-[#191c1d]">Inquilinos</h1>
           <p className="text-sm text-[#40493d] mt-1">Gestiona los inquilinos de tu propiedad</p>
         </div>
         <button
           onClick={() => setShowAddModal(true)}
-          className="flex items-center gap-2 px-5 py-2.5 bg-[#0d631b] text-white rounded-lg font-['Manrope'] text-sm font-[600] hover:bg-[#2e7d32] transition-colors shadow-sm self-start sm:self-auto cursor-pointer"
+          className="flex items-center gap-2 px-5 py-2.5 bg-[#0d631b] text-white rounded-lg font-['Manrope'] text-sm font-semibold hover:bg-[#2e7d32] transition-colors shadow-sm self-start sm:self-auto cursor-pointer"
         >
           <UserPlus size={18} />
           Agregar Inquilino

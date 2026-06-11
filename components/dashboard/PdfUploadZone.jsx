@@ -79,7 +79,7 @@ export function PdfUploadZone({ onPdfProcessed }) {
             <Loader2 className="text-amber-600 animate-spin" size={28} />
           </div>
           <div>
-            <h3 className="font-['Manrope'] font-[700] text-lg text-[#191c1d]">Procesando PDF...</h3>
+            <h3 className="font-['Manrope'] font-bold text-lg text-[#191c1d]">Procesando PDF...</h3>
             <p className="text-sm text-[#40493d] max-w-xs mx-auto">Extrayendo datos del recibo de luz. Por favor espera.</p>
           </div>
         </>
@@ -89,7 +89,7 @@ export function PdfUploadZone({ onPdfProcessed }) {
             <Upload className="text-[#0d631b]" size={28} />
           </div>
           <div>
-            <h3 className="font-['Manrope'] font-[700] text-lg text-[#191c1d]">Subir Recibo Maestro</h3>
+            <h3 className="font-['Manrope'] font-bold text-lg text-[#191c1d]">Subir Recibo Maestro</h3>
             <p className="text-sm text-[#40493d] max-w-xs mx-auto">Arrastra y suelta el PDF de la factura aquí o haz clic para buscar archivos</p>
           </div>
           {errorMsg && (

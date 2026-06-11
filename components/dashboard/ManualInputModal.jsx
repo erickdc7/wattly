@@ -26,7 +26,7 @@ export function ManualInputModal({ charges, autoFilled, onApply, onClose }) {
   return (
     <div className="bg-white rounded-xl p-6 max-w-md w-full space-y-4 shadow-2xl" onClick={(e) => e.stopPropagation()}>
       <div className="flex justify-between items-center">
-        <h3 className="font-['Manrope'] font-[700] text-lg text-[#191c1d]">
+        <h3 className="font-['Manrope'] font-bold text-lg text-[#191c1d]">
           {autoFilled ? "Confirmar Datos del Recibo" : "Ingresar Datos del Recibo"}
         </h3>
         <button onClick={onClose} className="p-1 hover:bg-gray-100 rounded cursor-pointer"><X size={20} /></button>
@@ -43,7 +43,7 @@ export function ManualInputModal({ charges, autoFilled, onApply, onClose }) {
 
           return (
             <div key={key} className="relative">
-              <label className="text-xs font-[600] text-[#445963] uppercase tracking-wider block mb-1 flex items-center gap-1.5">
+              <label className="text-xs font-semibold text-[#445963] uppercase tracking-wider block mb-1 flex items-center gap-1.5">
                 {label}
                 {wasFound && <CheckCircle2 size={13} className="text-emerald-500" />}
                 {wasMissing && <AlertTriangle size={13} className="text-amber-500" />}
@@ -68,7 +68,7 @@ export function ManualInputModal({ charges, autoFilled, onApply, onClose }) {
       </div>
       <button
         onClick={() => onApply(form)}
-        className="w-full py-3 bg-[#0d631b] text-white rounded-lg font-['Manrope'] font-[600] text-sm hover:bg-[#2e7d32] transition-colors cursor-pointer"
+        className="w-full py-3 bg-[#0d631b] text-white rounded-lg font-['Manrope'] font-semibold text-sm hover:bg-[#2e7d32] transition-colors cursor-pointer"
       >
         Aplicar Datos
       </button>
